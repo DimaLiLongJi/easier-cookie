@@ -1,6 +1,6 @@
 {
   "name": "easier-cookie",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A cookie library with a simple API provide",
   "main": "build/index.js",
   "scripts": {
@@ -26,6 +26,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DimaLiLongJi/easier-cookie/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.8.1"
   },
   "homepage": "https://github.com/DimaLiLongJi/easier-cookie#readme"
 }
