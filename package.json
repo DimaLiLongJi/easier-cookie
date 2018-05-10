@@ -1,6 +1,6 @@
 {
   "name": "easier-cookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cookie library with a simple API provide",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,16 @@
     "build": "parcel build ./src/index.js -d build",
     "pub-prod": "npm run build && npm publish"
   },
+  "keywords": [
+    "web",
+    "jquery-plugin",
+    "cookie",
+    "cookies",
+    "client",
+    "js-cookie",
+    "browserify",
+    "cookie-parse"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DimaLiLongJi/easier-cookie.git"
