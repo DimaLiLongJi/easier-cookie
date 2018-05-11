@@ -1,14 +1,16 @@
 const cookie = {
   set: function (name, value, options = {}) {
-    const cookieExpirse = options.expirse || 7;
-    const cookiePath = options.path || '/';
-    let mydate = new Date();
-    mydate.setDate(mydate.getDate() + cookieExpirse);
-    if (options.domain) {
-      document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(JSON.stringify(value))};expirse=${mydate.toGMTString()};path=${cookiePath};domain=${cookieDomain}`;
-    } else {
-      document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(JSON.stringify(value))};expirse=${mydate.toGMTString()};path=${cookiePath}`;
+    let cookieExpires = '';
+    let cookiePath = '';
+    let cookieDomain = '';
+    if (options.expires) {
+      const mydate = new Date();
+      mydate.setDate(mydate.getDate() + options.expires);
+      cookieExpires = `;expires=${mydate.toGMTString()}`;
     }
+    if (options.path) cookiePath = `;path=${options.path}`;
+    if (options.domain) cookieDomain = `;domain=${options.domain}`;
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(JSON.stringify(value))}${cookieExpires}${cookiePath}${cookieDomain}`;
   },
   get: function (name) {
     if (!name) return null;

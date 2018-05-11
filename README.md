@@ -21,25 +21,25 @@ import Cookie from 'easier-cookie';
 
   Cookie.set accepts 3 arguments: `key`, `value`, `options`
 
-  `options` is an Object which includes `expirse: day`, `path`, `domain`.
+  `options` is an Object which includes `expires: day`, `path`, `domain`.
 
   ```javascript
   // Create a cookie, which value is Object
   Cookie.set('name', {a:1}, {
-    expirse: 7,
+    expires: 7,
     path: '/aaa',
     domain: 'www.baidu.com'
   });
 
   // Create a cookie that expires 7 days from now
-  Cookie.set('name', 1, {expirse: 7});
+  Cookie.set('name', 1, {expires: 7});
 
   // Create an expiring cookie, valid to the path of the current page
   Cookies.set('name', 'value', { expires: 7, path: '/' });
 
   // Create an expiring cookie, which the domain is baidu
   Cookie.set('to', 'baidu', {
-    expirse: 7,
+    expires: 7,
     domain: 'www.baidu.com'
   });
   ```
