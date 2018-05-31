@@ -31,6 +31,11 @@ import Cookie from 'easier-cookie';
     domain: 'www.baidu.com'
   });
 
+  // Create a cookie, which value is an Array
+  Cookie.set('array', [1,2,3,4], 
+    expires: 7,
+  });
+
   // Create a cookie that expires 7 days from now
   Cookie.set('name', 1, {expires: 7});
 

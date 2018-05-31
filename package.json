@@ -1,12 +1,13 @@
 {
   "name": "easier-cookie",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A cookie library with a simple API provide",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build ./src/index.js -d build",
-    "pub-prod": "npm run build && npm publish"
+    "pub-prod": "npm run build && npm publish",
+    "start": "parcel ./demo/index.html -d dist --open"
   },
   "keywords": [
     "web",
