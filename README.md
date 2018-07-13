@@ -8,6 +8,8 @@ A cookie library with a simple API provide
 
 ### Module Loaders
 
+Now we support TypeScript
+
 JavaScript Cookie can also be loaded as an AMD or CommonJS module.
 
 ```javascript

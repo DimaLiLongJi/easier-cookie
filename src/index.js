@@ -47,4 +47,4 @@ const Cookie = {
   },
 };
 
-module.exports = Cookie;
+export default Cookie;
