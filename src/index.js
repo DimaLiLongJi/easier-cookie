@@ -1,4 +1,4 @@
-const cookie = {
+const Cookie = {
   set: function (name, value, options = {}) {
     let cookieExpires = '';
     let cookiePath = '';
@@ -37,8 +37,14 @@ const cookie = {
     return null;
   },
   remove: function (name) {
-    this.set(name, '', -1);
+    try{
+      this.set(name, '', -1);
+      return true;
+    } catch(e) {
+      console.error(`remove cookie ${name} failed:`, e);
+      return false;
+    }
   },
 };
 
-module.exports = cookie;
+module.exports = Cookie;
