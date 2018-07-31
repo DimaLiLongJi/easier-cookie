@@ -1,13 +1,17 @@
 {
   "name": "easier-cookie",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "A cookie library with a simple API provide",
-  "main": "src/index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pub-prod": "npm publish",
-    "start": "parcel ./demo/index.html -d dist --open"
+    "start": "parcel ./demo/index.html -d dist --open",
+    "build": "rm -rf build && parcel build ./src/index.js --no-source-maps -d build && cp -r ./src/index.d.ts build",
+    "pub-prod": "npm run build && npm publish"
   },
+  "files": [
+    "build"
+  ],
   "keywords": [
     "web",
     "jquery-plugin",
@@ -29,7 +33,8 @@
     "url": "https://github.com/DimaLiLongJi/easier-cookie/issues"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.8.1"
+    "parcel-bundler": "^1.8.1",
+    "typescript": "^3.0.1"
   },
   "homepage": "https://github.com/DimaLiLongJi/easier-cookie#readme"
 }

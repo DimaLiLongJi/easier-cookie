@@ -1,4 +1,3 @@
-// import Cookie from '../src';
 import Cookie from '../build';
 
 Cookie.set('object', {
@@ -8,7 +7,7 @@ Cookie.set('object', {
 });
 Cookie.set('string', '11不11');
 Cookie.set('number', 1111);
-Cookie.set('array', [1,2,3,4]);
+Cookie.set('array', ['1',2,3,4]);
 
 const oobject = Cookie.get('object');
 const sstring = Cookie.get('string');

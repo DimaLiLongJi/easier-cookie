@@ -5,10 +5,11 @@ A cookie library with a simple API provide
 ### Installation
 
     npm install easier-cookie
+    cnpm install easier-cookie
 
 ### Module Loaders
 
-Now we support TypeScript
+Now we support TypeScript.
 
 JavaScript Cookie can also be loaded as an AMD or CommonJS module.
 
@@ -34,7 +35,7 @@ import Cookie from 'easier-cookie';
   });
 
   // Create a cookie, which value is an Array
-  Cookie.set('array', [1,2,3,4], 
+  Cookie.set('array', ['1',2,3,4], 
     expires: 7,
   });
 
